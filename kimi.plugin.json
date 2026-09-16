@@ -1,0 +1,21 @@
+{
+  "name": "meta-ads-manager",
+  "version": "1.0.0",
+  "description": "Conversational Meta Ads Manager copilot for Kimi project chats: campaign status reports on demand, and guided campaign setup following Meta's framework (objective, budget, audience, placements, assets, tracking) with an execution recommendation before anything is created.",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Meta Ads Manager",
+    "shortDescription": "Ask campaign status or set up campaigns conversationally",
+    "longDescription": "Connects to Meta's official Ads MCP server (Meta Business OAuth). Ask for campaign status and get a performance readout with recommendations. Ask to set up a campaign and Kimi interviews you following Meta's campaign setup framework, then returns an execution recommendation for your approval before creating anything (always PAUSED by default).",
+    "developerName": "noncreativefolk"
+  },
+  "mcpServers": {
+    "meta": {
+      "url": "https://mcp.facebook.com/ads"
+    }
+  },
+  "skills": ["./skills/meta-ads-copilot"],
+  "sessionStart": {
+    "skill": "meta-ads-copilot"
+  }
+}
